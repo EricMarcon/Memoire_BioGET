@@ -80,16 +80,6 @@
     ]
   },
   {
-    "objectID": "discussion.html#a-faire-sur-github",
-    "href": "discussion.html#a-faire-sur-github",
-    "title": "4  Discussion",
-    "section": "4.2 A faire sur GitHub",
-    "text": "4.2 A faire sur GitHub\n\nActiver l’intégration continue\nAjouter un readme",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Discussion</span>"
-    ]
-  },
-  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "Références",
@@ -126,7 +116,7 @@
     "href": "annexe1.html#tableaux",
     "title": "Annexe A — Mode d’emploi de ce modèle",
     "section": "A.2 Tableaux",
-    "text": "A.2 Tableaux\nLes tableaux comme Tableau A.1 doivent être placés dans une division, comme les figures.\n\n\n\nTableau A.1: Caractéristiques de plusieurs modèles de voitures : autonomie en miles par gallon d’essence, nombre de cylindres du moteurs, cylindrée en puces cubes et puissance en chevaux.\n\n\n\n\n\n\n\n\n\n\nModèle\nAutonomie\nNombre de cylindres\nCylindrée\nPuissance\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n\n\nDatsun 710\n22.8\n4\n108\n93\n\n\nHornet 4 Drive\n21.4\n6\n258\n110",
+    "text": "A.2 Tableaux\nLes tableaux comme Tableau A.1 doivent être placés dans une division, comme les figures.\n\n\n\nTableau A.1: Caractéristiques de plusieurs modèles de voitures : autonomie en miles par gallon d’essence, nombre de cylindres du moteurs, cylindrée en puces cubes et puissance en chevaux.\n\n\n\n\n\n\n\n\n\n\n\nModèle\nAutonomie\nNombre de cylindres\nCylindrée\nPuissance\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n\n\nDatsun 710\n22.8\n4\n108\n93\n\n\nHornet 4 Drive\n21.4\n6\n258\n110",
     "crumbs": [
       "Annexes",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Mode d'emploi de ce modèle</span>"
