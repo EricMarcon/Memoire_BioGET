@@ -11,8 +11,3 @@
 - Supprimer l'affichage du résumé en tête de chaque chapitre HTML
 
 - Imprimer le résumé en quatrième de couverture PDF
-
-## A faire sur GitHub
-
-- Activer l'intégration continue
-- Ajouter un readme
