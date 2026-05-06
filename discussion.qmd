@@ -2,4 +2,12 @@
 
 # Discussion
 
-Vérification de la "typographie": française!
+A faire pour terminer le modèle:
+
+- Gérer les remerciements
+
+- Permettre le résumé bilingue
+
+- Supprimer l'affichage du résumé en tête de chaque chapitre HTML
+
+- Imprimer le résumé en quatrième de couverture PDF
