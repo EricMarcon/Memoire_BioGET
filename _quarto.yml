@@ -13,7 +13,7 @@ book:
         department: Master BioGET
         city: Montpellier
         state: France
-  date: "29/04/2026"
+  date: last-modified
   chapters:
     - index.qmd
     - intro.qmd
