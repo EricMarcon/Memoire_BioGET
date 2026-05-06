@@ -1,0 +1,28 @@
+# R files
+.Rproj.user
+.Rhistory
+.Rdata
+
+# RStudio files
+.positai
+/site_libs/
+
+# Quarto working files
+/.quarto/
+/nul
+/*.aux
+/*.bst
+/*.cls
+/*.html
+/*.log
+/*.pdf
+/*.tex
+
+# Cache
+/*_files/
+/*_cache/
+
+# Output. Comment out if GitHub Actions build the document.
+/docs/
+
+**/*.quarto_ipynb

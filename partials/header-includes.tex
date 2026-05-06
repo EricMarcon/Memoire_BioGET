@@ -1,0 +1,11 @@
+% Allow PDF cover page (see title.tex)
+\usepackage{pdfpages}
+% KOMA page header and footers, with a separation line below header
+\usepackage[headsepline]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+% Headers show chapter title on odd pages, section title on even pages
+\automark[section]{chapter}
+% Skip 1/4 line height between paragraphs
+\usepackage[indent, skip=.25\baselineskip]{parskip}
+% Improve list format
+\usepackage{enumitem}

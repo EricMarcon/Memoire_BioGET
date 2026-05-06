@@ -1,0 +1,24 @@
+$if(pdftitlepage)$
+  \renewcommand{\maketitle}{%
+    \includepdf[pages=1]{$pdftitlepage$}%
+    \cleardoublepage%
+  }
+$else$
+  % Original pandoc code
+  % https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/pdf/pandoc/title.tex
+  $if(title)$
+  \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
+  $endif$
+  $if(subtitle)$
+  \usepackage{etoolbox}
+  \makeatletter
+  \providecommand{\subtitle}[1]{% add subtitle to \maketitle
+    \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+  }
+  \makeatother
+  \subtitle{$subtitle$}
+  $endif$
+  $-- This supports Quarto's authors normalization
+  \author{$for(authors)$$it.name.literal$$sep$ \and $endfor$}
+  \date{$date$}
+$endif$

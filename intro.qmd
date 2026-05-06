@@ -1,0 +1,9 @@
+{{< include common.qmd >}}
+
+# Introduction
+
+Problématique
+
+Objectifs
+
+Plan général de la démarche

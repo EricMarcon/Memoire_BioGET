@@ -1,0 +1,5 @@
+{{< include common.qmd >}}
+
+# Discussion
+
+Vérification de la "typographie": française!

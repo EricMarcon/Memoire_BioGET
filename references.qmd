@@ -1,0 +1,11 @@
+# Références {.unnumbered}
+
+\begingroup
+\raggedright
+\small
+
+::: {#refs}
+:::
+
+\normalsize
+\endgroup

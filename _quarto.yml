@@ -1,0 +1,147 @@
+project:
+  type: book
+  # Répertoire de production du mémoire. docs est compatible avec Github
+  output-dir: docs
+
+book:
+  # Métadonnées et contenu du mémoire à compléter
+  title: Mémoire BioGET
+  author:
+    name: Prénom Nom
+    affiliation:
+      - name: Université de Montpellier / AgroParisTech
+        department: Master BioGET
+        city: Montpellier
+        state: France
+  date: "29/04/2026"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - m&m.qmd
+    - resultats.qmd
+    - discussion.qmd
+    - conclusion.qmd
+    - references.qmd
+  appendices:
+    - annexe1.qmd
+  site-url: https://ericmarcon.github.io/Memoire_BioGET/
+  favicon: images/logo_bioget.png
+  cover-image: couverture/couverture.png
+  cover-image-alt: |
+    Mémoire de stage, master BioGET
+  repo-url: https://github.com/ericmarcon/Memoire_BioGET/
+  repo-actions: [edit]
+  downloads: [pdf]
+# Couverture du PDF (cover.pdf pour un mémoire en anglais)
+# Mettre à jour le fichier Word correspondant et l'exporter en PDF
+pdftitlepage: couverture/couverture.pdf
+
+# Langue du document (en-GB ou en-US ou fr-FR)
+lang: fr-FR
+# Tableau plutôt que Table pour décrire les tableaux
+language:
+  crossref-tbl-title: "Tableau"
+# Guillemets français
+csquotes: true
+
+abstract: >
+  Ce modèle vous aide à produire un document conforme au Guide de rédaction "Rédiger un mémoire de stage : check-list avant soumission".
+  L'ordre des sections et les styles ne doivent pas être modifiés.
+  Ce modèle DOIT être utilisé lors de la création de votre document de mémoire de stage.
+  En cas de difficulté d'utilisation, contactez l'équipe pédagogique.
+
+thanks: >
+  Je remercie...
+
+# Bibliographie
+bibliography: references.bib
+# Style bibliographique : APA 7
+csl: apa
+# Table des matières
+toc: true
+# Profondeur : titres 1 à 3
+toc-depth: 3
+# Liste des figures
+lof: true
+# Liste des tables
+lot: true
+# Numérotation des sections
+number-sections: true
+# Profondeur
+number-depth: 3
+# Couleur des liens
+linkcolor: blue
+urlcolor: blue
+
+
+# Comportement des bouts de codes R
+execute:
+  # show code chunk output
+  include: true
+  # Show the code in the output
+  echo: false
+  # Show messages
+  message: false
+  # Show warnings
+  warning: false
+  # Cache code results
+  cache: true
+
+format:
+  html:
+    theme:
+      - cosmo
+    # Formatage du texte en français en HTML
+    pandoc_args:
+      - --lua-filter=fr-nbsp.lua
+  pdf:
+    # Classe du document : rapport
+    documentclass: scrreprt
+    # Options de la classe: recto-verso
+    classoption: [twoside]
+    papersize: A4
+    # Taille de la police. 12 en standard, 13 en Times.
+    # Ne pas dépasser 80 caractères par ligne.
+    fontsize: 12pt
+    # Police Palatino (TeX Gyre Pagella)
+    # https://www.gust.org.pl/projects/e-foundry/tex-gyre
+    mainfont: texgyrepagella
+    mainfontoptions:
+      - Extension=.otf
+      - UprightFont=*-regular
+      - BoldFont=*-bold
+      - BoldItalicFont=*-bolditalic
+      - ItalicFont=*-italic
+    # Police mathématique Times
+    mathfont: texgyrepagella-math.otf
+    # Géométrie de la page
+    # https://tex.stackexchange.com/questions/132170/what-do-headheight-headsep-etc-do-in-the-vmargin-package
+    geometry:
+      # Marges
+      - inner=4cm
+      - outer=3cm
+      - top=3cm
+      - bottom=3cm
+      # Espace entre entête et corps de texte
+      - headsep=22pt
+      # Taille des entêtes
+      - headheight=11pt
+      # Taille du pied de page
+      - footskip=33pt
+      # Mode de calcul de la hauteur de la page
+      - ignorehead
+      - ignorefoot
+      # Arrondi de la hauteur de la page pour simplifier le travail de LaTeX
+      - heightrounded
+    # Paragraphes indentés
+    indent: true
+    # Formatage du modèle LaTeX
+    template-partials:
+      - partials/title.tex
+    include-in-header: partials/header-includes.tex
+
+# Conserver le fichier tex intermédiaire pour pdf
+keep-tex: true
+
+# Mode d'ouverture de l'éditeur
+editor: visual

@@ -1,0 +1,74 @@
+{{< include common.qmd >}}
+
+# Mode d'emploi de ce modèle
+
+L'objectif de ce modèle est de vous permettre de rédiger votre mémoire de stage en respectant les principes de la rédaction scientifique [@Lindsay2011] et de reproductibilité [@Marcon2021].
+
+## Figures
+
+Les figures produites par du code R suivent la syntaxe suivante.
+
+::: {#fig-nom_figure}
+```{r}
+#| label: nom_figure
+# Load the packages in the first chiunk of each chapter
+library("tidyverse")
+# Recall the ggplot theme defined in the options chunk
+ggtheme_set()
+# Example plot
+mpg %>% 
+  ggplot(aes(x = cty, y = hwy)) +
+  # create a scatterplot
+  geom_point() +
+  # fit a linear model
+  geom_smooth(formula = y ~ x, method = "lm")
+```
+
+Lien entre l'autonomie sur autoroute et en ville de 38 modèles de voiture.
+:::
+
+Pour appeler une figure, insérer une référence croisée : @fig-nom_figure.
+
+Pour une figure enregistrée dans un fichier (comme la @fig-BioGET), il est possible d'utiliser la syntaxe de Markdown si le titre ne contient qu'une seule ligne.
+
+![Logo de BioGET](images/logo_bioget.png){#fig-BioGET}
+
+## Tableaux
+
+Les tableaux comme @tbl-nom_tableau doivent être placés dans une division, comme les figures.
+
+::: {#tbl-nom_tableau}
+```{r}
+#| label: nom_tableau
+library("gt")
+# Formatage du tableau mtcars
+mtcars %>% 
+  # Transformation des noms de lignes en une colonne
+  as_tibble(rownames = "Modèle") %>% 
+  # Conservation des 5 premières colonnes
+  select(1:5) %>% 
+  # Conservation des 4 premières lignes
+  slice(1:4) %>% 
+  # Formatage par gt
+  gt() %>% 
+  # Nom des colonnes
+  cols_label(
+    mpg = "Autonomie",
+    cyl = "Nombre de cylindres",
+    disp = "Cylindrée",
+    hp = "Puissance"
+  )
+```
+
+Caractéristiques de plusieurs modèles de voitures : autonomie en miles par gallon d'essence, nombre de cylindres du moteurs, cylindrée en puces cubes et puissance en chevaux.
+:::
+
+## Équations
+
+Les équations en ligne sont entourées par un simple `$`, alors que les équations numérotées le sont par `$$` et sont nommées pour permettre leur référencement (@eq-cercle):
+
+$$A = \pi r^2$$ {#eq-cercle}
+
+## Bibliographie
+
+Insérez les références à partir de Zotero en mode visuel (Insert / Citation) ou bien utilisez le plug-in Better BibTeX de Zotero pour exporter un dossier de références automatiquement à chaque modification.
