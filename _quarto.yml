@@ -45,7 +45,7 @@ language:
 csquotes: true
 
 abstract: >
-  Ce modèle vous aide à produire un document conforme au Guide de rédaction "Rédiger un mémoire de stage : check-list avant soumission".
+  Ce modèle vous aide à produire un document conforme au Guide de rédaction "Rédiger un mémoire de stage: check-list avant soumission".
   L'ordre des sections et les styles ne doivent pas être modifiés.
   Ce modèle DOIT être utilisé lors de la création de votre document de mémoire de stage.
   En cas de difficulté d'utilisation, contactez l'équipe pédagogique.
@@ -91,9 +91,6 @@ format:
   html:
     theme:
       - cosmo
-    # Formatage du texte en français en HTML
-    pandoc_args:
-      - --lua-filter=fr-nbsp.lua
   pdf:
     # Classe du document : rapport
     documentclass: scrreprt
@@ -139,9 +136,13 @@ format:
     template-partials:
       - partials/title.tex
     include-in-header: partials/header-includes.tex
-
 # Conserver le fichier tex intermédiaire pour pdf
 keep-tex: true
+
+filters:
+  # Formatage du texte en français en HTML. Adapté de:
+  # https://github.com/InseeFrLab/pandoc-filter-fr-nbsp
+  - fr-nbsp.lua
 
 # Mode d'ouverture de l'éditeur
 editor: visual
