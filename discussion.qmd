@@ -1,7 +1,3 @@
 {{< include common.qmd >}}
 
 # Discussion
-
-## A faire pour terminer le modèle
-
-- Vérifier la mise en page.
