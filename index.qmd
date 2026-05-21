@@ -1,3 +1,13 @@
-# Remerciements {.unnumbered}
+# Résumé {.unnumbered}
 
-Je remercie...
+Ce modèle vous aide à produire un document conforme au Guide de rédaction "Rédiger un mémoire de stage: check-list avant soumission".
+
+L'ordre des sections et les styles ne doivent pas être modifiés.
+Ce modèle DOIT être utilisé lors de la création de votre document de mémoire de stage.
+En cas de difficulté d'utilisation, contactez l'équipe pédagogique.
+
+::: {lang="en-GB"}
+## Abstract {.unnumbered}
+
+Include an English version of the abstract.
+:::

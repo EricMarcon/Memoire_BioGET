@@ -60,7 +60,7 @@ mtcars %>%
   )
 ```
 
-Caractéristiques de plusieurs modèles de voitures : autonomie en miles par gallon d'essence, nombre de cylindres du moteurs, cylindrée en puces cubes et puissance en chevaux.
+Caractéristiques de plusieurs modèles de voitures : autonomie en miles par gallon d'essence, nombre de cylindres du moteurs, cylindrée en pouces cubes et puissance en chevaux.
 :::
 
 ## Équations
