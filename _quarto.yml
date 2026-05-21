@@ -15,9 +15,10 @@ book:
         state: France
   date: last-modified
   chapters:
-    - index.qmd
+    - index.qmd          # Contient le résumé
+    - remerciements.qmd  # Suivi de la table des matières
     - intro.qmd
-    - m&m.qmd
+    - mm.qmd
     - resultats.qmd
     - discussion.qmd
     - conclusion.qmd
@@ -44,15 +45,6 @@ language:
 # Guillemets français
 csquotes: true
 
-abstract: >
-  Ce modèle vous aide à produire un document conforme au Guide de rédaction "Rédiger un mémoire de stage: check-list avant soumission".
-  L'ordre des sections et les styles ne doivent pas être modifiés.
-  Ce modèle DOIT être utilisé lors de la création de votre document de mémoire de stage.
-  En cas de difficulté d'utilisation, contactez l'équipe pédagogique.
-
-thanks: >
-  Je remercie...
-
 # Bibliographie
 bibliography: references.bib
 # Style bibliographique : APA 7
@@ -71,6 +63,7 @@ number-sections: true
 number-depth: 3
 # Couleur des liens
 linkcolor: blue
+toccolor: black
 urlcolor: blue
 
 
@@ -91,6 +84,10 @@ format:
   html:
     theme:
       - cosmo
+    filters:
+    # Formatage du texte en français en HTML. Adapté de:
+    # https://github.com/InseeFrLab/pandoc-filter-fr-nbsp
+    - fr-nbsp.lua
   pdf:
     # Classe du document : rapport
     documentclass: scrreprt
@@ -99,7 +96,7 @@ format:
     papersize: A4
     # Taille de la police. 12 en standard, 13 en Times.
     # Ne pas dépasser 80 caractères par ligne.
-    fontsize: 12pt
+    fontsize: 11pt
     # Police Palatino (TeX Gyre Pagella)
     # https://www.gust.org.pl/projects/e-foundry/tex-gyre
     mainfont: texgyrepagella
@@ -122,7 +119,7 @@ format:
       # Espace entre entête et corps de texte
       - headsep=22pt
       # Taille des entêtes
-      - headheight=11pt
+      - headheight=20pt
       # Taille du pied de page
       - footskip=33pt
       # Mode de calcul de la hauteur de la page
@@ -134,15 +131,13 @@ format:
     indent: true
     # Formatage du modèle LaTeX
     template-partials:
+      - partials/header-includes.tex
       - partials/title.tex
+      - partials/toc.tex
     include-in-header: partials/header-includes.tex
-# Conserver le fichier tex intermédiaire pour pdf
-keep-tex: true
+    # Conserver le fichier tex intermédiaire pour pdf
+    keep-tex: true
 
-filters:
-  # Formatage du texte en français en HTML. Adapté de:
-  # https://github.com/InseeFrLab/pandoc-filter-fr-nbsp
-  - fr-nbsp.lua
 
 # Mode d'ouverture de l'éditeur
 editor: visual
