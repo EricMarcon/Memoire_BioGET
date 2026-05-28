@@ -25,13 +25,13 @@ book:
     - references.qmd
   appendices:
     - annexe1.qmd
+  repo-url: https://github.com/ericmarcon/Memoire_BioGET/
+  repo-actions: [edit]
   site-url: https://ericmarcon.github.io/Memoire_BioGET/
   favicon: images/logo_bioget.png
   cover-image: couverture/couverture.png
   cover-image-alt: |
     Mémoire de stage, master BioGET
-  repo-url: https://github.com/ericmarcon/Memoire_BioGET/
-  repo-actions: [edit]
   downloads: [pdf]
 # Couverture du PDF (cover.pdf pour un mémoire en anglais)
 # Mettre à jour le fichier Word correspondant et l'exporter en PDF
@@ -40,9 +40,10 @@ pdftitlepage: couverture/couverture.pdf
 # Langue du document (en-GB ou en-US ou fr-FR)
 lang: fr-FR
 # Tableau plutôt que Table pour décrire les tableaux
+# (à supprimer pour un mémoire en anglais)
 language:
   crossref-tbl-title: "Tableau"
-# Guillemets français
+# Guillemets français, mais aussi guillemets améliorés en anglais
 csquotes: true
 
 # Bibliographie
@@ -94,8 +95,7 @@ format:
     # Options de la classe: recto-verso
     classoption: [twoside]
     papersize: A4
-    # Taille de la police. 12 en standard, 13 en Times.
-    # Ne pas dépasser 80 caractères par ligne.
+    # Taille de la police. Ne pas dépasser 80 caractères par ligne.
     fontsize: 11pt
     # Police Palatino (TeX Gyre Pagella)
     # https://www.gust.org.pl/projects/e-foundry/tex-gyre
@@ -106,7 +106,7 @@ format:
       - BoldFont=*-bold
       - BoldItalicFont=*-bolditalic
       - ItalicFont=*-italic
-    # Police mathématique Times
+    # Police mathématique assortie
     mathfont: texgyrepagella-math.otf
     # Géométrie de la page
     # https://tex.stackexchange.com/questions/132170/what-do-headheight-headsep-etc-do-in-the-vmargin-package
@@ -137,7 +137,6 @@ format:
     include-in-header: partials/header-includes.tex
     # Conserver le fichier tex intermédiaire pour pdf
     keep-tex: true
-
 
 # Mode d'ouverture de l'éditeur
 editor: visual
