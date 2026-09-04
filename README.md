@@ -6,11 +6,18 @@ Modèle de mémoire de stage rédigé avec R et Quarto pour le master BEE BioGET
 
 ## Utilisation
 
-Télécharger le zip : Bouton vert *Code*, choisir *Download zip*.
+### Avec GitHub
+
+Cliquer sur le bouton vert *Use this Template*, choisir *Create a new repository* pour créer son propre dépôt.
+Le cloner ensuite pour le modifier avec RStudio.
+
+### Sans GitHub
+
+Télécharger le zip : bouton vert *Code*, choisir *Download zip*.
 Le décompresser dans un dossier de travail.
 Ouvrir le projet (`memoire_BioGET.Rproj`) avec RStudio.
 
-De préférence : passer le projet sous contrôle de source et le pousser sur GitHub.
+De préférence : passer le projet sous contrôle de source.
 
 ## Paramétrage
 
