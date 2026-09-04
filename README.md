@@ -47,3 +47,19 @@ Penser à modifier `_quarto.yml` si le mémoire est écrit en anglais:
 - Supprimer l'option spécifique au français:
   - `language:`
     - `crossref-tbl-title: "Tableau"`
+
+## R
+
+Le fichier `common.qmd` est appelé par tous les chapitres qui contiennent du code R, par l'instruction `{{< include common.qmd >}}`.
+Il contient un bout de code nommé "Options" à compléter en déclarant chaque package utilisé dans le projet dans la variable `packages`.
+Par défaut:
+
+```
+# Add necessary packages here
+packages <- c(
+  "tidyverse", 
+  "gt"
+)
+```
+
+Les packages seront installés pour permettre l'intégration continue du projet par les actions GitHub.
