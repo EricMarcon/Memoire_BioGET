@@ -1,29 +1,27 @@
 ```{r}
-#| label: DoNotModify
-### Utilities for R.
-# Installation of R packages if necessary
-install_packages <- function(packages) {
-  invisible(
-    sapply(
-      packages, 
-      FUN = function(package) {
-        if (!package %in% installed.packages()[, 1]) {
-          install.packages(
-            package, 
-            repos = "https://cran.rstudio.com/", 
-            quiet = TRUE
-          )
-        }
-      }
-    )
-  )
-}
+#| label: Options
+### Customized R options for this document
+# Delete this chunk if you don't use R
 
-# Basic packages
-install_packages(c("knitr", "formatR"))
+# Necessary packages. Add all packages used in the code here.
+packages_required <- c(
+  # R tools, do not modify
+  "knitr",
+  # Add specific packages here
+  "tidyverse", 
+  "gt"
+)
+# Already installed?
+packages_installed <- vapply(
+  packages_required, 
+  FUN = requireNamespace, 
+  FUN.VALUE = TRUE, 
+  quietly = TRUE
+) 
+# Install missing packages
+install.packages(names(packages_installed)[!packages_installed])
 
-# Chunk font size hook: allows size='small' 
-# or any valid Latex font size in chunk options
+# Allow size='small' or any valid Latex font size in chunk options
 def.chunk.hook <- knitr::knit_hooks$get("chunk")
 knitr::knit_hooks$set(
   chunk = function(x, options) {
@@ -35,24 +33,11 @@ knitr::knit_hooks$set(
     )
   }
 )
-```
-
-```{r}
-#| label: Options
-### Customized R options for this document
-
-# Add necessary packages here
-packages <- c(
-  "tidyverse", 
-  "gt"
-)
-# Install them
-install_packages(packages)
 
 # knitr options (https://yihui.org/knitr/options/)
 knitr::opts_chunk$set(
   # Code chunk automatic format if tidy is TRUE
-  tidy = FALSE, 
+  tidy = TRUE, 
   # Tidy code options: remove blank lines and cut lines after 50 characters
   tidy.opts = list(blank = FALSE, width.cutoff = 50),
   # Font size in PDF output
@@ -65,7 +50,7 @@ options(width = 50)
 
 # ggplot style
 library("tidyverse")
-# Function to call in each chunk
+# Function to call in each chunk that produces a figure
 ggtheme_set <- function() {
   theme_set(theme_bw())
   theme_update(
