@@ -63,6 +63,44 @@ mtcars %>%
 Caractéristiques de plusieurs modèles de voitures : autonomie en miles par gallon d'essence, nombre de cylindres du moteurs, cylindrée en pouces cubes et puissance en chevaux.
 :::
 
+Les tableaux sont produits en formatant un data frame avec la fonction `gt()` du package [*gt*](https://gt.rstudio.com/), qui est aux tableaux ce que *ggplot2* est aux graphiques.
+
+Les tableaux ont tendance à déborder du texte en PDF s'ils sont trop larges.
+La façon la plus efficace de les réduire est de diminuer la taille de la police de caractères.
+La police du mémoire est de taille 11.
+Pour passer le tableau en police 10, passer le tableau à la fonction `opt_table_font(size = px(10))`.
+Si le tableau est vraiment large, on peut l'insérer dans une page au format paysage, dans une division `.landscape`.
+Attention: un saut de page est généré à l'endroit exact où se trouve la division.
+
+:::: landscape
+::: {#tbl-paysage}
+```{r}
+#| label: paysage
+# Formatage du tableau mtcars
+mtcars %>% 
+  # Transformation des noms de lignes en une colonne
+  as_tibble(rownames = "Modèle") %>% 
+  # Conservation des 5 premières colonnes
+  select(1:7) %>% 
+  # Conservation des 4 premières lignes
+  slice(1:10) %>% 
+  # Formatage par gt
+  gt() %>% 
+  # Nom des colonnes
+  cols_label(
+    mpg = "Autonomie",
+    cyl = "Nombre de cylindres",
+    disp = "Cylindrée",
+    hp = "Puissance",
+    drat = "Rapport de pont arrière",
+    wt = "Masse"
+  )
+```
+
+Taleau au format paysage en PDF.
+:::
+::::
+
 ## Équations
 
 Les équations en ligne sont entourées par un simple `$`, alors que les équations numérotées le sont par `$$` et sont nommées pour permettre leur référencement (@eq-cercle):
