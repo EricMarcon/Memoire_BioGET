@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Mémoire BioGET",
     "section": "",
-    "text": "Résumé\nCe modèle vous aide à produire un document conforme au Guide de rédaction “Rédiger un mémoire de stage : check-list avant soumission”.\nL’ordre des sections et les styles ne doivent pas être modifiés. Ce modèle DOIT être utilisé lors de la création de votre document de mémoire de stage. En cas de difficulté d’utilisation, contactez l’équipe pédagogique.",
+    "text": "Résumé\nCe modèle vous aide à produire un document conforme au Guide de rédaction “Rédiger un mémoire de stage : check-list avant soumission”.\nL’ordre des sections et les styles ne doivent pas être modifiés. Ce modèle peut être utilisé lors de la création de votre document de mémoire de stage, au choix avec le modèle Word déposé sur Moodle. En cas de difficulté d’utilisation, contactez l’équipe pédagogique.",
     "crumbs": [
       "Résumé"
     ]
@@ -34,7 +34,7 @@
     "href": "intro.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "The downloaded binary packages are in\n    /var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T//RtmpKHqsa0/downloaded_packages\n\n\nProblématique\nObjectifs\nPlan général de la démarche",
+    "text": "Problématique\nObjectifs\nPlan général de la démarche",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
