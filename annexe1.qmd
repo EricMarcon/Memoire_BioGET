@@ -11,7 +11,7 @@ Les figures produites par du code R suivent la syntaxe suivante.
 ::: {#fig-nom_figure}
 ```{r}
 #| label: nom_figure
-# Load the packages in the first chiunk of each chapter
+# Load the packages in the first chunk of each chapter
 library("tidyverse")
 # Recall the ggplot theme defined in the options chunk
 ggtheme_set()
