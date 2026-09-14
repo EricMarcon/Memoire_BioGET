@@ -6,7 +6,14 @@ L'objectif de ce modèle est de vous permettre de rédiger votre mémoire de sta
 
 ## Figures
 
-Les figures produites par du code R suivent la syntaxe suivante.
+Les figures produites par du code R suivent la syntaxe suivante (afficher en mode source).
+
+En mode visuel:
+
+- insérer une division ("Insert/Div..."),
+- compléter le champ ID par le nom de la figure, commençant obligatoirement par "#fig-",
+- insérer le bout de code qui créera la figure dans la division,
+- entre le bout de code et la fin de la division, écrire la légende.
 
 ::: {#fig-nom_figure}
 ```{r}
@@ -35,7 +42,7 @@ Pour une figure enregistrée dans un fichier (comme la @fig-BioGET), il est poss
 
 ## Tableaux
 
-Les tableaux comme @tbl-nom_tableau doivent être placés dans une division, comme les figures.
+Les tableaux comme @tbl-nom_tableau doivent être placés dans une division, comme les figures, mais son nom doit commencer par "#tbl-".
 
 ::: {#tbl-nom_tableau}
 ```{r}
@@ -103,7 +110,7 @@ Taleau au format paysage en PDF.
 
 ## Équations
 
-Les équations en ligne sont entourées par un simple `$`, alors que les équations numérotées le sont par `$$` et sont nommées pour permettre leur référencement (@eq-cercle):
+Les équations en ligne sont entourées par un simple `$`, alors que les équations numérotées le sont par `$$` et sont nommées (leur nom doit commencer par "#eq-") pour permettre leur référencement (@eq-cercle):
 
 $$A = \pi r^2$$ {#eq-cercle}
 
