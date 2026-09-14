@@ -6,6 +6,9 @@ project:
 book:
   # Métadonnées et contenu du mémoire à compléter
   title: Mémoire BioGET
+  # Version du modèle, n'apparaît pas dans le document final
+  version: 1.0.0
+  # Compléter avec vos données
   author:
     name: Prénom Nom
     affiliation:
@@ -13,6 +16,7 @@ book:
         department: Master BioGET
         city: Montpellier
         state: France
+  # Date automatique
   date: last-modified
   chapters:
     - index.qmd          # Contient le résumé
@@ -25,10 +29,14 @@ book:
     - references.qmd
   appendices:
     - annexe1.qmd
+  # Adresse du dépôt Github, à remplacer par la vôtre
   repo-url: https://github.com/ericmarcon/Memoire_BioGET/
   repo-actions: [edit]
+  # Adresse du site Github, à remplacer par la vôtre
   site-url: https://ericmarcon.github.io/Memoire_BioGET/
   favicon: images/logo_bioget.png
+  # Couverture affichée sur le site web.
+  # Mettre à jour le fichier Word correspondant et l'exporter en PNG
   cover-image: couverture/couverture.png
   cover-image-alt: |
     Mémoire de stage, master BioGET
@@ -88,6 +96,7 @@ format:
     filters:
     # Formatage du texte en français en HTML. Adapté de:
     # https://github.com/InseeFrLab/pandoc-filter-fr-nbsp
+    # Supprimer si le document n'est pas écrit en français
     - fr-nbsp.lua
   pdf:
     # Classe du document : rapport
@@ -131,7 +140,6 @@ format:
     indent: true
     # Formatage du modèle LaTeX
     template-partials:
-      - partials/header-includes.tex
       - partials/title.tex
       - partials/toc.tex
     include-in-header: partials/header-includes.tex
