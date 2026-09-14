@@ -35,8 +35,9 @@ book:
   # Adresse du site Github, à remplacer par la vôtre
   site-url: https://ericmarcon.github.io/Memoire_BioGET/
   favicon: images/logo_bioget.png
-  # Couverture affichée sur le site web.
-  # Mettre à jour le fichier Word correspondant et l'exporter en PNG
+  # Couverture affichée sur le site web, voir plus bas.
+  # Exporter la courverture PDF en PNG avec un convertisseur en ligne
+  # cover.png pour un mémoire en anglais
   cover-image: couverture/couverture.png
   cover-image-alt: |
     Mémoire de stage, master BioGET
