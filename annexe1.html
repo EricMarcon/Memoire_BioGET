@@ -273,7 +273,14 @@ window.Quarto = {
 <p>L’objectif de ce modèle est de vous permettre de rédiger votre mémoire de stage en respectant les principes de la rédaction scientifique <span class="citation" data-cites="Lindsay2011">(<a href="references.html#ref-Lindsay2011" role="doc-biblioref">Lindsay, 2011</a>)</span> et de reproductibilité <span class="citation" data-cites="Marcon2021">(<a href="references.html#ref-Marcon2021" role="doc-biblioref">Marcon, 2021</a>)</span>.</p>
 <section id="figures" class="level2" data-number="A.1">
 <h2 data-number="A.1" class="anchored" data-anchor-id="figures"><span class="header-section-number">A.1</span> Figures</h2>
-<p>Les figures produites par du code R suivent la syntaxe suivante.</p>
+<p>Les figures produites par du code R suivent la syntaxe suivante (afficher en mode source).</p>
+<p>En mode visuel&nbsp;:</p>
+<ul>
+<li>insérer une division (“Insert/Div…”),</li>
+<li>compléter le champ ID par le nom de la figure, commençant obligatoirement par “#fig-”,</li>
+<li>insérer le bout de code qui créera la figure dans la division,</li>
+<li>entre le bout de code et la fin de la division, écrire la légende.</li>
+</ul>
 <div id="fig-nom_figure" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-nom_figure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -309,7 +316,7 @@ Figure&nbsp;A.2: Logo de BioGET
 </section>
 <section id="tableaux" class="level2" data-number="A.2">
 <h2 data-number="A.2" class="anchored" data-anchor-id="tableaux"><span class="header-section-number">A.2</span> Tableaux</h2>
-<p>Les tableaux comme <a href="#tbl-nom_tableau" class="quarto-xref">Tableau&nbsp;<span>A.1</span></a> doivent être placés dans une division, comme les figures.</p>
+<p>Les tableaux comme <a href="#tbl-nom_tableau" class="quarto-xref">Tableau&nbsp;<span>A.1</span></a> doivent être placés dans une division, comme les figures, mais son nom doit commencer par “#tbl-”.</p>
 <div id="tbl-nom_tableau" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-nom_tableau-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1397,7 +1404,7 @@ Tableau&nbsp;A.2: Taleau au format paysage en PDF.
 </section>
 <section id="équations" class="level2" data-number="A.3">
 <h2 data-number="A.3" class="anchored" data-anchor-id="équations"><span class="header-section-number">A.3</span> Équations</h2>
-<p>Les équations en ligne sont entourées par un simple <code>$</code>, alors que les équations numérotées le sont par <code>$$</code> et sont nommées pour permettre leur référencement (<a href="#eq-cercle" class="quarto-xref">Équation&nbsp;<span>A.1</span></a>)&nbsp;:</p>
+<p>Les équations en ligne sont entourées par un simple <code>$</code>, alors que les équations numérotées le sont par <code>$$</code> et sont nommées (leur nom doit commencer par “#eq-”) pour permettre leur référencement (<a href="#eq-cercle" class="quarto-xref">Équation&nbsp;<span>A.1</span></a>)&nbsp;:</p>
 <p><span id="eq-cercle"><span class="math display">\[A = \pi r^2 \tag{A.1}\]</span></span></p>
 </section>
 <section id="bibliographie" class="level2" data-number="A.4">
